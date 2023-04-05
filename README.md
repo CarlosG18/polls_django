@@ -25,3 +25,8 @@ estudando o tutorial de exemplo fornecido no site do django:
 >> from .models import Question
 >> admin.site.register(Question)
 
+- atalho para carregar um template e retornar um HttpResponse com o resultado: ultilize o render(request, [url do template], context)
+
+- quando você quiser ultilizar variaveis no html use {{}} já para colocar codigo python use: {% for i in range(5) %}
+
+##parte 4 (trabalhando com forms)
