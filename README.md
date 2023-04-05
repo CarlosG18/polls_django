@@ -1,12 +1,27 @@
 # learn_django
-Fazendo alguns testes em django
+estudando o tutorial de exemplo fornecido no site do django: 
 
-para criar um novo projeto em django use:
-/* django-admin startproject [nome do projeto]
+**aplicação de enquetes**
 
-para rodar o servidor, esteja no mesmo diretorio do arquivo manage.py(interface para trabalhar com o terminal):
-$ python manage.py runserver
+- para criar um novo projeto em django use:
 
-para criar uma aplicação:
-$ python manage.py startapp [nome da aplicação]
+> $ django-admin startproject [nome do projeto]
+
+- para rodar o servidor, esteja no mesmo diretorio do arquivo manage.py(interface para trabalhar com o terminal):
+
+> $ python manage.py runserver
+
+- para criar uma aplicação:
+
+> $ python manage.py startapp [nome da aplicação]
+
+- criando um super usuário para gerenciar a aplicação:
+
+> python manage.py createsuperuser
+
+- para adicionar um model na pagina de administração:
+
+> cd polls/admin.py
+>> from .models import Question
+>> admin.site.register(Question)
 
