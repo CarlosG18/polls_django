@@ -5,26 +5,33 @@ estudando o tutorial de exemplo fornecido no site do django:
 
 - para criar um novo projeto em django use:
 
-> $ django-admin startproject [nome do projeto]
-
+```bash
+ $ django-admin startproject [nome_do_projeto]
+```
 - para rodar o servidor, esteja no mesmo diretorio do arquivo manage.py(interface para trabalhar com o terminal):
 
-> $ python manage.py runserver
-
+```bash
+$ python manage.py runserver
+```
 - para criar uma aplicação:
 
-> $ python manage.py startapp [nome da aplicação]
-
+```bash
+$ python manage.py startapp [nome da aplicação]
+```
 - criando um super usuário para gerenciar a aplicação:
 
-> $ python manage.py createsuperuser
+```bash
+$ python manage.py createsuperuser
+```
 
 - para adicionar um model na pagina de administração:
+cd polls/admin.py
 
-> cd polls/admin.py
-> from .models import Question
-> admin.site.register(Question)
+```python
+from .models import Question
 
+admin.site.register(Question)
+```
 - atalho para carregar um template e retornar um HttpResponse com o resultado: ultilize o render(request, [url do template], context)
 
 - quando você quiser ultilizar variaveis no html use {{}} já para colocar codigo python use: {% for i in range(5) %}
