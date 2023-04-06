@@ -30,3 +30,5 @@ estudando o tutorial de exemplo fornecido no site do django:
 - quando você quiser ultilizar variaveis no html use {{}} já para colocar codigo python use: {% for i in range(5) %}
 
 ##parte 4 (trabalhando com forms)
+
+- para adicionar estilos voce precisa definir arqyivos estaticos
