@@ -1,5 +1,6 @@
 # learn_django
-estudando o tutorial de exemplo fornecido no site do django: 
+estudando o tutorial de exemplo fornecido no 
+[site do django](https://docs.djangoproject.com/en/4.2/intro/tutorial01/): 
 
 **aplicação de enquetes**
 
@@ -8,7 +9,7 @@ estudando o tutorial de exemplo fornecido no site do django:
 ```bash
  $ django-admin startproject [nome_do_projeto]
 ```
-- para rodar o servidor, esteja no mesmo diretorio do arquivo manage.py(interface para trabalhar com o terminal):
+- para rodar o servidor, esteja no mesmo diretorio do arquivo `manage.py` _(interface para trabalhar com o terminal)_:
 
 ```bash
 $ python manage.py runserver
@@ -25,7 +26,7 @@ $ python manage.py createsuperuser
 ```
 
 - para adicionar um model na pagina de administração:
-cd polls/admin.py
+`cd polls/admin.py`
 
 ```python
 from .models import Question
@@ -34,7 +35,7 @@ admin.site.register(Question)
 ```
 - atalho para carregar um template e retornar um HttpResponse com o resultado: ultilize o render(request, [url do template], context)
 
-- quando você quiser ultilizar variaveis no html use {{}} já para colocar codigo python use: {% for i in range(5) %}
+- quando você quiser ultilizar variaveis no html use `{{}}` já para colocar codigo python use: `{% [codigo python] %}`
 
 ## parte 4 (trabalhando com forms)
 
