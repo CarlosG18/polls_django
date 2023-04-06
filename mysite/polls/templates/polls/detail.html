@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/style.css' %}" />
 </head>
 <body>
     <!--
@@ -20,6 +22,7 @@
         </div>
     </div>
     -->
+  <div class="box">
     <form action="{% url 'polls:vote' question.id %}" method="post">
         {% csrf_token %}
         <fieldset>
@@ -32,7 +35,8 @@
                     <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
                 {% endfor %}
         </fieldset>
-        <input type="submit" value="Vote">
+        <input class="button" type="submit" value="Vote">
     </form>    
+  </div>
 </body>
 </html>

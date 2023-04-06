@@ -43,3 +43,6 @@ def vote(request, question_id):
         select_choice.votes += 1
         select_choice.save()
         return HttpResponseRedirect(reverse("polls:results", args=(question_id,)))
+        
+def create_question(request):
+  HttpResponse("crie uma nova enquete!")

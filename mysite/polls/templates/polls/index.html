@@ -1,24 +1,24 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width='device-width', initial-scale=1.0">
     <title>index</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/style.css' %}" />
 </head>
 <body>
     <div class="box">
-        <h1>LISTANDO PERGUNTAS</h1>
+        <h1>Perguntas</h1>
         {% if list %}
-            <ul>
             {% for question in list %}
-                <!--<li><a href="/polls/{{ question.id }}/">{{ question.question_text}}</a></li>-->    
-                <li><a href="{% url 'polls:details' question.id %}">{{ question.question_text}}</a></li>
+                <a href="{% url 'polls:details' question.id %}">{{ question.question_text}}</a>
             {% endfor %}
-            </ul>
         {% else %}
             <p>No Polls are available</p>
         {% endif %}    
     </div>
+    <a href="{% url 'polls:create_quest' %}">crie uma nova enquente</a>
 </body>
 </html>
