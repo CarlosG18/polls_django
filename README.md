@@ -31,4 +31,7 @@ estudando o tutorial de exemplo fornecido no site do django:
 
 ##parte 4 (trabalhando com forms)
 
-- para adicionar estilos voce precisa definir arqyivos estaticos
+- para adicionar estilos voce precisa definir arqyivos estaticos. para isso defina um diretorio 'static' e nele coloque os arquivos editaveis. no template faça:
+
+> {% load static %} 
+
