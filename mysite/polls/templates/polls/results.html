@@ -11,13 +11,13 @@
 </head>
 <body class="flex flex-col items-center bg-gradient-to-b from-sky-400 bg-no-repeat">
   <div class="flex text-center items-center justify-center flex-col rounded-xl bg-sky-900 text-white p-5 m-5 border-2 border-zinc-100 shadow-xl">
-    <h1>{{ question.question_text}}</h1>
+    <h1 class="mb-5">{{ question.question_text}}</h1>
         {% for choice in question.choice_set.all %}
         <p>{{ choice.choice_text }} -- {{ choice.votes}} vote{{ choice.votes|pluralize }}</p>
         {% endfor %}
-    <div class="space">
-      <a href="{% url 'polls:details' question.id%}">Vote again?</a>
-      <a href="{% url 'polls:index' %}">voltar a home</a>
+    <div class="mt-7">
+      <a class="bg-sky-600 rounded p-3" href="{% url 'polls:details' question.id%}">Vote again?</a>
+      <a class="bg-sky-600 rounded p-3" href="{% url 'polls:index' %}">voltar a home</a>
     </div>
   </div>
     
