@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Results</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/style.css' %}" />
+    <!--<link rel="stylesheet" type="text/css" href="{% static 'polls/css/style.css' %}" />-->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <div class="box">
+<body class="flex flex-col items-center bg-gradient-to-b from-sky-400 bg-no-repeat">
+  <div class="flex text-center items-center justify-center flex-col rounded-xl bg-sky-900 text-white p-5 m-5 border-2 border-zinc-100 shadow-xl">
     <h1>{{ question.question_text}}</h1>
         {% for choice in question.choice_set.all %}
         <p>{{ choice.choice_text }} -- {{ choice.votes}} vote{{ choice.votes|pluralize }}</p>
