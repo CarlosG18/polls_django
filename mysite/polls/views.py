@@ -4,9 +4,10 @@ from django.http import HttpResponse, HttpResponseRedirect#, Http404
 from .models import Choice, Question
 #from django.template import loader
 from django.urls import reverse
+from django.utils import timezone
 
 def index(request):
-    list_questions = Question.objects.order_by("-pub_date")[:5]
+    list_questions = Question.objects.all()
     #template = loader.get_template("polls/index.html")
     context = {
         "list" : list_questions,
@@ -45,4 +46,11 @@ def vote(request, question_id):
         return HttpResponseRedirect(reverse("polls:results", args=(question_id,)))
         
 def create_question(request):
-  HttpResponse("crie uma nova enquete!")
+  return render(request, "polls/new_question.html")
+  
+def savequest(request):
+  question = Question(question_text=request.POST["question"], pub_date=timezone.now())
+  question.save()
+  choice = request.POST["choice"]
+  question.choice_set.create(choice_text=request.POST["choice"], votes=0)
+  return HttpResponseRedirect(reverse("polls:index"))

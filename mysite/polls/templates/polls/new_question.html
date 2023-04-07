@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/style.css' %}" />
+</head>
+<body>
+  <div>
+    <form action="{% url 'polls:savequest' %}" method="POST">
+      {% csrf_token %}
+      <fieldset>
+        <legend><h1>criando uma enquete</h1></legend>
+        <input id="quest" type="text" name="question">
+        <label for="quest">question</label>
+        <input id="choice" type="text" name="choice">
+        <label for="choice">escolha</label>
+      </fieldset>
+      <input type="submit">
+    </form>
+  </div>
+</body>
+</html>

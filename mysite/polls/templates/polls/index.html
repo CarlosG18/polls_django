@@ -13,12 +13,12 @@
         <h1>Perguntas</h1>
         {% if list %}
             {% for question in list %}
-                <a href="{% url 'polls:details' question.id %}">{{ question.question_text}}</a>
+                <a href="{% url 'polls:details' question.id %}">{{ question.question_text}} - {{ question.id }}</a>
             {% endfor %}
         {% else %}
             <p>No Polls are available</p>
         {% endif %}    
     </div>
-    <a href="{% url 'polls:create_quest' %}">crie uma nova enquente</a>
+    <a href="{% url 'polls:createquest' %}">crie uma nova enquente</a>
 </body>
 </html>
