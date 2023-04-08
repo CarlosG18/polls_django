@@ -89,3 +89,4 @@ self.assertIs([funcao a ser testada], [valor correto que deveria retornar])
 $ python manage.py test polls
 ```
 
+## parte 6
