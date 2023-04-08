@@ -22,11 +22,11 @@
     {% if list %}
       {% for question in list %}
         <div class="flex text-center items-center justify-center flex-col rounded-xl bg-sky-900 text-white p-5 m-5 border-2 border-zinc-100 shadow-xl">
-        <a href="{% url 'polls:details' question.id %}">{{ question.question_text}}</a>
+        <a href="{% url 'polls:detail' question.id %}">{{ question.question_text}}</a>
         </div>
       {% endfor %}
     {% else %}
-      <p>No Polls are available</p>
+      <p>Sem enquetes cadastradas!</p>
     {% endif %}  
   </div>
 </body>

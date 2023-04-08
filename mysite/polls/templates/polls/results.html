@@ -16,7 +16,7 @@
         <p>{{ choice.choice_text }} -- {{ choice.votes}} vote{{ choice.votes|pluralize }}</p>
         {% endfor %}
     <div class="mt-7">
-      <a class="bg-sky-600 rounded p-3" href="{% url 'polls:details' question.id%}">Vote again?</a>
+      <a class="bg-sky-600 rounded p-3" href="{% url 'polls:detail' question.id%}">Vote again?</a>
       <a class="bg-sky-600 rounded p-3" href="{% url 'polls:index' %}">voltar a home</a>
     </div>
   </div>

@@ -15,13 +15,17 @@
       {% csrf_token %}
       <fieldset>
         <legend><h1 class="mb-5">Criando uma enquete</h1></legend>
-        <div class="flex flex-col mb-4 items-start">
+        <div class="flex flex-col mb-7 items-start">
           <label for="quest">question</label>
-          <input class="w-full p-1 rounded text-black" id="quest" type="text" name="question">
+          <input required class="w-full p-1 rounded text-black" id="quest" type="text" name="question">
+        </div>
+        <div class="flex flex-col mb-3 items-start">
+          <label for="choice1">escolha 1</label>
+        <input required class="w-full rounded text-black p-1" id="choice1" type="text" name="choice1">
         </div>
         <div class="flex flex-col mb-10 items-start">
-          <label for="choice">escolha</label>
-        <input class="w-full rounded text-black p-1" class="mb-10" id="choice" type="text" name="choice">
+          <label for="choice2">escolha 2</label>
+        <input required class="w-full rounded text-black p-1" id="choice2" type="text" name="choice2">
         </div>
       </fieldset>
       <input class="bg-sky-600 rounded p-3" type="submit" value="Cadastrar">
