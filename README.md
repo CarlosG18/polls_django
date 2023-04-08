@@ -37,11 +37,7 @@ admin.site.register(Question)
 
 - quando você quiser ultilizar variaveis no html use `{{}}` já para colocar codigo python use: `{% [codigo python] %}`
 
-## parte 4 (trabalhando com forms)
-
-- para adicionar estilos voce precisa definir arqyivos estaticos. para isso defina um diretorio 'static' e nele coloque os arquivos editaveis. no template faça:
-
-> {% load static %} 
+## parte 4
 
 ### usando views genéricas:
 
@@ -64,4 +60,32 @@ para realizar a mudança de uma view comum para uma view genérica basta fazer o
 ```
 2. **generic.DetailView**: view genérica para mostrar detalhes sobre algo. 
 
-## parte 5 (trabalhando com testes)
+## parte 5
+
+escrever testes é uma boa pratica. `test-driven development` é uma disciplina que realiza a parte dos testes antes ds escrever os codigos da sua aplicação.
+
+- seus testes devem ser criados no arquivo: `tests.py`.
+- crie uma subclasse de django.test.Testcase com essa base:
+```python
+class [Nomedomodel]ModelTest(TestCase):
+```
+- nesta subclasse, crie uma função de teste que comece com a palavra `test`, logo em seguida com o nome da função a ser testada e juntamente com o tipo de teste.
+***testando a função soma***
+
+```python
+def test_soma_com_numeros_negativos(self):
+  a = -5
+  b = -7
+  assertIs(soma(a,b), -12)
+```
+
+- use o metodo .assertIs():
+```python
+self.assertIs([funcao a ser testada], [valor correto que deveria retornar])
+```
+
+- execute o teste com este comando:
+```bash
+$ python manage.py test polls
+```
+

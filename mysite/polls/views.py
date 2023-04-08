@@ -11,7 +11,7 @@ class IndexView(generic.ListView):
   template_name = "polls/index.html"
   context_object_name = "list" 
   def get_queryset(self):
-    return Question.objects.all()
+    return Question.objects.order_by("pub_date")[:5]
 
 class DetailView(generic.DetailView):
   template_name = "polls/detail.html"
