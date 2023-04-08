@@ -1,4 +1,4 @@
-# learn_django + tailwindcss
+# learn_django
 estudando o tutorial de exemplo fornecido no 
 [site do django](https://docs.djangoproject.com/en/4.2/intro/tutorial01/): 
 
