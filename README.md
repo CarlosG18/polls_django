@@ -37,7 +37,7 @@ admin.site.register(Question)
 
 - quando você quiser ultilizar variaveis no html use `{{}}` já para colocar codigo python use: `{% [codigo python] %}`
 
-## parte 4
+## parte 4 - generic views
 
 ### usando views genéricas:
 
@@ -60,7 +60,7 @@ para realizar a mudança de uma view comum para uma view genérica basta fazer o
 ```
 2. **generic.DetailView**: view genérica para mostrar detalhes sobre algo. 
 
-## parte 5
+## parte 5 - testes
 
 escrever testes é uma boa pratica. `test-driven development` é uma disciplina que realiza a parte dos testes antes ds escrever os codigos da sua aplicação.
 
@@ -89,4 +89,16 @@ self.assertIs([funcao a ser testada], [valor correto que deveria retornar])
 $ python manage.py test polls
 ```
 
-## parte 6
+## parte 6 - arquivos estáticos
+
+para usar arquivos estaticos (css, js) faça:
+- crie uma pasta `static` no diretorio de sua aplicação;
+- dentro dela crie uma subpasta `nome_da_aplicaçao`;
+- nessa subpasta adicione os arquivos estáticos: `style.css`, `main.js`;
+- nos seus templates faça:
+  - no topo coloque `{% load static %}`;
+  - no link do css por exemplo coloque: `{% static 'nome_da_aplicacao/style.css' %}`
+
+## parte 7 - modificando a parte de admin
+
+## parte 8 - ferramenta de depuração
