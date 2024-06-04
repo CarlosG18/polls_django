@@ -12,9 +12,3 @@ A aplicação de enquetes (polls) consiste em um sistema simples no qual os usu�
 ## 🎯 Objetivo
 
 Estudar um tutorial de exemplo em Django é fundamental para aprender as melhores práticas e os padrões de desenvolvimento do framework. Ele proporciona uma experiência prática de desenvolvimento, ajudando a entender como as diferentes partes de uma aplicação se conectam e como utilizar os recursos principais do Django, como modelos, visualizações e URLs, de forma eficaz.
-
-## 🌐 Deploy
-
-Observe este exemplo de aplicação em funcionamento.
-
-- o sistema de perguntas **polls_django** pode ser acessado [🔗 por aqui]()
